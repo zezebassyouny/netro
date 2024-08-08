@@ -1,3 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In / Sign Up</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Basic CSS for visibility, replace with your own styles */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        .row {
+            display: flex;
+            width: 100%;
+        }
+        .col {
+            flex: 1;
+            padding: 10px;
+        }
+        .align-items-center {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .flex-col {
+            flex-direction: column;
+        }
+        .form-wrapper {
+            width: 100%;
+        }
+        .input-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .input-group i {
+            margin-right: 10px;
+        }
+        button {
+            margin-top: 10px;
+        }
+        .pointer {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
 <div id="container" class="container">
     <!-- FORM SECTION -->
     <div class="row">
@@ -7,19 +58,19 @@
                 <div class="form sign-up">
                     <div class="input-group">
                         <i class='bx bxs-user'></i>
-                        <input type="text" placeholder="Username">
+                        <input type="text" placeholder="Username" aria-label="Username">
                     </div>
                     <div class="input-group">
                         <i class='bx bx-mail-send'></i>
-                        <input type="email" placeholder="Email">
+                        <input type="email" placeholder="Email" aria-label="Email">
                     </div>
                     <div class="input-group">
                         <i class='bx bxs-lock-alt'></i>
-                        <input type="password" placeholder="Password">
+                        <input type="password" placeholder="Password" aria-label="Password">
                     </div>
                     <div class="input-group">
                         <i class='bx bxs-lock-alt'></i>
-                        <input type="password" placeholder="Confirm password">
+                        <input type="password" placeholder="Confirm password" aria-label="Confirm password">
                     </div>
                     <button>
                         Sign up
@@ -34,20 +85,20 @@
                     </p>
                 </div>
             </div>
-        
         </div>
         <!-- END SIGN UP -->
+
         <!-- SIGN IN -->
         <div class="col align-items-center flex-col sign-in">
             <div class="form-wrapper align-items-center">
                 <div class="form sign-in">
                     <div class="input-group">
                         <i class='bx bxs-user'></i>
-                        <input type="text" placeholder="Username">
+                        <input type="text" placeholder="Username" aria-label="Username">
                     </div>
                     <div class="input-group">
                         <i class='bx bxs-lock-alt'></i>
-                        <input type="password" placeholder="Password">
+                        <input type="password" placeholder="Password" aria-label="Password">
                     </div>
                     <button>
                         Sign in
@@ -67,13 +118,11 @@
                     </p>
                 </div>
             </div>
-            <div class="form-wrapper">
-    
-            </div>
         </div>
         <!-- END SIGN IN -->
     </div>
     <!-- END FORM SECTION -->
+
     <!-- CONTENT SECTION -->
     <div class="row content-row">
         <!-- SIGN IN CONTENT -->
@@ -82,26 +131,36 @@
                 <h2>
                     Welcome
                 </h2>
-
             </div>
             <div class="img sign-in">
-    
+                <!-- Add an image if necessary -->
             </div>
         </div>
         <!-- END SIGN IN CONTENT -->
+
         <!-- SIGN UP CONTENT -->
         <div class="col align-items-center flex-col">
             <div class="img sign-up">
-            
+                <!-- Add an image if necessary -->
             </div>
             <div class="text sign-up">
                 <h2>
                     Join with us
                 </h2>
-
             </div>
         </div>
         <!-- END SIGN UP CONTENT -->
     </div>
     <!-- END CONTENT SECTION -->
 </div>
+
+<script>
+    function toggle() {
+        const signUpForm = document.querySelector('.sign-up');
+        const signInForm = document.querySelector('.sign-in');
+        signUpForm.classList.toggle('hidden');
+        signInForm.classList.toggle('hidden');
+    }
+</script>
+</body>
+</html>
