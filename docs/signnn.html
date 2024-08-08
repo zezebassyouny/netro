@@ -47,6 +47,9 @@
         .pointer {
             cursor: pointer;
         }
+        .hidden {
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -155,13 +158,8 @@
     <!-- END CONTENT SECTION -->
 </div>
 
-<script>
-    function toggle() {
-        const signUpForm = document.querySelector('.sign-up');
-        const signInForm = document.querySelector('.sign-in');
-        signUpForm.classList.toggle('hidden');
-        signInForm.classList.toggle('hidden');
-    }
-</script>
+<!-- Include the external JavaScript file -->
+<script src="sign_in.js" defer></script>
+
 </body>
 </html>
